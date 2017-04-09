@@ -1,4 +1,5 @@
 const express    = require('express'),
+      routes     = require('./routes'),
       bodyParser = require('body-parser'),
       verify     = require('./utils/verify');
 
@@ -13,6 +14,10 @@ app.enable('strict routing');
 
 // Boot middleware
 app.use(bodyParser.json({verify}));
+
+// Setup routes
+const wh = process.env.WH;
+app.get(wh, routes.verify);
 
 // Attach 404 handler
 app.use((req, res, next) => {
