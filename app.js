@@ -1,6 +1,6 @@
-const express      = require('express'),
-      bodyParser   = require('body-parser'),
-      cookieParser = require('cookie-parser');
+const express    = require('express'),
+      bodyParser = require('body-parser'),
+      verify     = require('./utils/verify');
 
 
 // Create Express app
@@ -12,8 +12,7 @@ app.disable('x-powered-by');
 app.enable('strict routing');
 
 // Boot middleware
-app.use(cookieParser());
-app.use(bodyParser.json());
+app.use(bodyParser.json({verify}));
 
 // Attach 404 handler
 app.use((req, res, next) => {
