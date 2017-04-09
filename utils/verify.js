@@ -16,7 +16,7 @@ module.exports = (req, res, body) => {
   const sign = req.headers['x-hub-signature'];
   if (!sign) throw Error('Missing signing token.');
 
-  const hash = sign.substr(4);
+  const hash = sign.substr(5);
   const exph = crypto.createHmac('sha1', SECRET).update(body).digest('hex');
   if (exph !== hash) throw Error('Invalid signing token.');
 };
