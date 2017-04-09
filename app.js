@@ -18,6 +18,7 @@ app.use(bodyParser.json({verify}));
 // Setup routes
 const wh = process.env.WH;
 app.get(wh, routes.verify);
+app.post(wh, routes.answer);
 
 // Attach 404 handler
 app.use((req, res, next) => {
