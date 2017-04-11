@@ -31,3 +31,20 @@ module.exports = (json, callback = null) => {
     }
   });
 };
+
+
+/**
+ * Send text to API.
+ *
+ * @param {string} id User ID.
+ * @param {string} text Message.
+ * @param {string} [metadata] Additional.
+ * @param {function} [callback] Called at end.
+ */
+module.exports.text = (id, text, metadata, callback) => {
+  module.exports({
+    text,
+    metadata,
+    recipient: {id}
+  }, callback);
+};
