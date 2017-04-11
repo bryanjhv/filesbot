@@ -16,6 +16,7 @@ app.use(bodyParser.json());
 
 // Setup routes
 app.post('/', routes.download);
+app.get('/:file', routes.serve);
 
 // Attach 404 handler
 app.use((req, res, next) => {

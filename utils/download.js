@@ -1,14 +1,9 @@
 const fs        = require('fs'),
-      path      = require('path'),
+      UPLOADS   = require('./dir'),
       crypto    = require('crypto'),
       notify    = require('./notify'),
       download  = require('download'),
       phantomjs = require('phantomjs-prebuilt');
-
-
-// General uploads directory
-const UPLOADS = path.join(__dirname, '../uploads');
-if (!fs.existsSync(UPLOADS)) fs.mkdirSync(UPLOADS);
 
 
 /**
