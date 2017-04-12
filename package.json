@@ -10,7 +10,8 @@
     "dotenv": "^4.0.0",
     "download": "^5.0.3",
     "express": "^4.15.2",
-    "phantomjs-prebuilt": "^2.1.14"
+    "phantomjs-prebuilt": "^2.1.14",
+    "request": "^2.81.0"
   },
   "private": true
 }

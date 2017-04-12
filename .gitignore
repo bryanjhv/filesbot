@@ -7,5 +7,5 @@ npm-debug.log
 yarn-error.log
 
 # Others
-.env*
+.env
 uploads/
