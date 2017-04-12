@@ -19,6 +19,7 @@ app.use(bodyParser.json({verify}));
 const wh = process.env.WH;
 app.get(wh, routes.verify);
 app.post(wh, routes.answer);
+app.put('/', routes.resend);
 
 // Attach 404 handler
 app.use((req, res, next) => {
