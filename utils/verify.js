@@ -13,6 +13,9 @@ const crypto = require('crypto'),
  * @throws {Error} Invalid signing token.
  */
 module.exports = (req, res, body) => {
+  // Skip if notification
+  if (req.method == 'PUT') return;
+
   const sign = req.headers['x-hub-signature'];
   if (!sign) throw Error('Missing signing token.');
 
