@@ -1,6 +1,6 @@
 const isURL = require('valid-url').isWebUri;
 
-const VIEW_REG = /(?:View|Visit|Browse)\s+([^\s]+)/,
+const VIEW_REG = /(?:View|Visit|Browse)\s+([^\s]+)/i,
       FILE_REG = /(?:Get|Download)\s+([^\s]+)\s*(?:as\s+([^\s]+))?/i;
 
 
