@@ -43,8 +43,7 @@ module.exports = (json, callback = null) => {
  */
 module.exports.text = (id, text, metadata, callback) => {
   module.exports({
-    text,
-    metadata,
-    recipient: {id}
+    recipient: {id},
+    message: {text, metadata}
   }, callback);
 };
